@@ -25,10 +25,13 @@ public class ValveRifle : MonoBehaviour
     }
     IEnumerator ShootValve()
     {
-        Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        GameObject BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance.GetComponent<BulletValveRifle>().Weapon = gameObject; 
         yield return new WaitForSeconds(timeBetweenBullets);
-        Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance.GetComponent<BulletValveRifle>().Weapon = gameObject;
         yield return new WaitForSeconds(timeBetweenBullets);
-        Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance.GetComponent<BulletValveRifle>().Weapon = gameObject;
     }
 }

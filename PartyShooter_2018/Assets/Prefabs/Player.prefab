@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112800524604353921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0244, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4738821228069541733}
@@ -515,10 +515,9 @@ MonoBehaviour:
   - {r: 0.5330782, g: 1, b: 0, a: 1}
   - {r: 1, g: 0, b: 0.37790203, a: 1}
   gunPivotPoint: {fileID: 4738821228227295033}
-  playerId: 0
   WeaponPrefab: {fileID: 2744805071760304296, guid: 493dfb04d8164ea468bb1e5edc69b87c,
     type: 3}
-  WeaponInstance: {fileID: 0}
+  playerId: 0
 --- !u!50 &1641278821704201006
 Rigidbody2D:
   serializedVersion: 4
@@ -849,7 +848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8869495580276060268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.017, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4738821228069541733}
