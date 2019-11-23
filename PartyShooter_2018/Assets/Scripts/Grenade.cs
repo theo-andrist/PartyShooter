@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    
-    public int Damage;
-    
-    public int ThrowSpeed;
-
-    public float TimeBeforeExploding;
 
     private Rigidbody2D rB;
 
@@ -17,40 +11,26 @@ public class Grenade : MonoBehaviour
     private bool hot = false;
 
     private int playerNbOfThrower;
-    public int PlayerNBOfThrower { get { return playerNbOfThrower; } set { playerNbOfThrower = value; } }
+    public int throwerId { get { return playerNbOfThrower; } set { playerNbOfThrower = value; } }
 
-    private bool gunReversed;
-    public bool GunReversed {
+    /*private float throwSpeed;
+    public float ThrowSpeed { get { return throwSpeed; } set { throwSpeed = value; } }*/
 
-        get
-        {
-            return gunReversed;
-        }
-
-        set
-        {
-            gunReversed = value;
-
-            if (gunReversed)
-            {
-                rB.velocity = -transform.right * ThrowSpeed;
-            }
-            else
-            {
-                rB.velocity = transform.right * ThrowSpeed;
-            }
-        }
-
-    }
-
-    void Awake()
+    void Start()
     {
         rB = gameObject.GetComponent<Rigidbody2D>();
+
         
+        rB.velocity = -transform.up * GetComponent<ItemManager>().throwSpeed;
+        
+
         StartCoroutine(MakeHot());
         StartCoroutine(MakeExplode());
     }
-
+    private void Update()
+    {
+        
+    }
     IEnumerator MakeHot()
     {
         yield return new WaitForSeconds(timeBeforeHot);
@@ -60,7 +40,7 @@ public class Grenade : MonoBehaviour
     }
     IEnumerator MakeExplode()
     {
-        yield return new WaitForSeconds(TimeBeforeExploding);
+        yield return new WaitForSeconds(GetComponent<ItemManager>().timeBeforeDestroying);
 
         Explode();        
     }
@@ -70,7 +50,7 @@ public class Grenade : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(Damage);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(GetComponent<ItemManager>().Damage);
 
                 Explode();
             }
@@ -79,7 +59,7 @@ public class Grenade : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PlayerManager>().PlayerId != playerNbOfThrower)
             {
-                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(Damage);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(GetComponent<ItemManager>().Damage);
 
                 Explode();
             }

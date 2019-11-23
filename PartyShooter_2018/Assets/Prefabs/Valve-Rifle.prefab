@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86ca0affa949f54c94f9243d29cd096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenBullets: 0.15
+  timeBetweenBullets: 0.05
   Bullet: {fileID: 3102911867875561033, guid: 479ddf65ba5e81e49be96df7382952e8, type: 3}
   BulletSpawn: {fileID: 4022755216038838989}
 --- !u!114 &114616882610764310
@@ -109,9 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df048695edae044795899990a6b9b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 18
+  WeaponName: Valve-Rifle
+  bulletSpeed: 45
   bulletDamage: 15
-  timeBeforeShoot: 1
+  shootRate: 1
 --- !u!1 &4022755216038838989
 GameObject:
   m_ObjectHideFlags: 0

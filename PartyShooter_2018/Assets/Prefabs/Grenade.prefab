@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7225044670611197406}
   - component: {fileID: 7225044670611197407}
   - component: {fileID: 6297350270516731540}
-  - component: {fileID: 4314068631742200218}
   - component: {fileID: 4867818271819377575}
+  - component: {fileID: 4784756112908060887}
   m_Layer: 8
   m_Name: Grenade
   m_TagString: Item
@@ -120,19 +120,6 @@ CircleCollider2D:
   m_Offset: {x: -0.1, y: -0.35}
   serializedVersion: 2
   m_Radius: 0.7
---- !u!114 &4314068631742200218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7225044670611197377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc217ff6e7610447a3346ba85611aa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 5
 --- !u!114 &4867818271819377575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +132,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b5ec25953285f49a07dbbc03d5cb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 60
-  ThrowSpeed: 20
-  TimeBeforeExploding: 5
   timeBeforeHot: 2.5
+--- !u!114 &4784756112908060887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225044670611197377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ce7176e33f99148a204e5fbfa20123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 70
+  timeBeforeDestroying: 5
+  throwSpeed: 25
+  throwRate: 2

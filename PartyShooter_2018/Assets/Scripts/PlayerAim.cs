@@ -11,8 +11,6 @@ public class PlayerAim : MonoBehaviour
     private float bulletCountUp;
     private bool allowedToShoot = false;
 
-    private GameObject WeaponManager;
-
     public GameObject Item;
     public Image shootItemTimer;
     private float itemCountUp;
@@ -27,7 +25,6 @@ public class PlayerAim : MonoBehaviour
 
     private void Start()
     {
-        WeaponManager = GameObject.Find("WeaponManager");
         setInputNames();
     }
 
@@ -53,11 +50,11 @@ public class PlayerAim : MonoBehaviour
                         gunReversed = false;
                     }
                 }
-                if (bulletCountUp < GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().timeBeforeShoot)
+                if (bulletCountUp < GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().shootRate)
                 {
                     bulletCountUp += Time.deltaTime;
 
-                    shootBulletTimer.GetComponent<Image>().fillAmount = bulletCountUp / GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().timeBeforeShoot;
+                    shootBulletTimer.GetComponent<Image>().fillAmount = bulletCountUp / GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().shootRate;
                 }
                 else
                 {
@@ -70,11 +67,11 @@ public class PlayerAim : MonoBehaviour
                     {
                         try
                         {
-                            GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().Shoot(GetComponent<PlayerManager>().PlayerId);
+                            GetComponent<PlayerManager>().WeaponInstance.GetComponent<WeaponManager>().Shoot();
                         }
                         catch (System.Exception e)
                         {
-                            Debug.Log("neu erstellte waffe hat script Weaponshoot?" + e);
+                            Debug.LogWarning("neu erstellte waffe hat script Weaponshoot?" + e);
                         }
                         
 
@@ -83,21 +80,19 @@ public class PlayerAim : MonoBehaviour
                     }
                 }
 
-               /* if (itemCountUp < Item.GetComponent<Item>().Cooldown)
+                if (itemCountUp < GetComponent<ItemSpawnManager>().WeaponPrefab.GetComponent<ItemManager>().throwRate)
                 {
                     itemCountUp += Time.deltaTime;
 
-                    shootItemTimer.GetComponent<Image>().fillAmount = itemCountUp / Item.GetComponent<Item>().Cooldown;
+                    shootItemTimer.GetComponent<Image>().fillAmount = itemCountUp / GetComponent<ItemSpawnManager>().WeaponPrefab.GetComponent<ItemManager>().throwRate;
                 }
                 else
                 {
                     allowedToShootItem = true;
-                }*/
+                }
                 if (Input.GetAxis(itemInput) > 0.5 && allowedToShootItem)
                 {
-                    /*GameObject itemInstance = Instantiate(Item, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
-                    itemInstance.GetComponent<Grenade>().GunReversed = gunReversed;
-                    itemInstance.GetComponent<Grenade>().PlayerNBOfThrower = GetComponent<PlayerManager>().PlayerId;*/
+                    GetComponent<ItemSpawnManager>().throwItem();
 
                     itemCountUp = 0;
                     allowedToShootItem = false;

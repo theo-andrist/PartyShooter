@@ -51,7 +51,7 @@ public class PlayerManager : MonoBehaviour
     }
     private void Start()
     {
-        gunRenderer = gameObject.transform.GetChild(2).GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        gunRenderer = gameObject.transform.GetChild(2).GetChild(1).gameObject.GetComponent<SpriteRenderer>();
         GetComponent<SpriteRenderer>().color = Colors[playerId];
         GetComponent<SpriteRenderer>().sortingOrder = playerId * 2;
         gunRenderer.sortingOrder = playerId * 2 + 1;

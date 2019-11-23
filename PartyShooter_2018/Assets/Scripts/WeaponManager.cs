@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
+    public string WeaponName;
+
     public float bulletSpeed;
 
     public int bulletDamage;
 
-    public int timeBeforeShoot;
-    public void Shoot(int ChoosedWeaponId)
+    public int shootRate;
+    public void Shoot()
     {
-        switch (ChoosedWeaponId)
+        switch (WeaponName)
         {
-            case 0:
+            case "Valve-Rifle":
                 GetComponent<ValveRifle>().Shoot();
                 break;
             default:

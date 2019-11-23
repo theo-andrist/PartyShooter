@@ -27,6 +27,8 @@ public class JoystickController: MonoBehaviour
     }
     public static GameObject[] choosedWeapons = new GameObject[4];
 
+    public static GameObject[] choosedItems = new GameObject[4];
+
     void Update()
     {
         switch (playerId)
