@@ -63,24 +63,26 @@ public class GameManager : MonoBehaviour
         int rnd = Random.Range(0, SpawnPoints.Length);
 
         GameObject playerInstance = Instantiate(PlayerPrefab, SpawnPoints[rnd].transform.position, PlayerPrefab.transform.rotation);
+        playerInstance.GetComponent<PlayerHealth>().indestructible = true;
         players.Add(playerInstance);
         playerInstance.GetComponent<BoxCollider2D>().enabled = false;
 
-        StartCoroutine(FadeInObject(playerInstance, FadeInTime));
+        StartCoroutine(FadeInPlayer(playerInstance, FadeInTime));
             
         playerInstance.GetComponent<PlayerManager>().PlayerId = player.GetComponent<PlayerManager>().PlayerId;
         playerInstance.GetComponent<BoxCollider2D>().enabled = true;
     }
-    IEnumerator FadeInObject(GameObject fadeObject, float incrementation)
+    IEnumerator FadeInPlayer(GameObject player, float incrementation)
     {
 
         for (float f = incrementation; f <= 1; f += incrementation)
         {
-            Color tmp = fadeObject.GetComponent<SpriteRenderer>().color;
+            Color tmp = player.GetComponent<SpriteRenderer>().color;
             tmp.a = f;
-            fadeObject.GetComponent<SpriteRenderer>().color = tmp;
+            player.GetComponent<SpriteRenderer>().color = tmp;
             yield return new WaitForSeconds(incrementation);
-        }           
+        }
+        player.GetComponent<PlayerHealth>().indestructible = false;
     }
 
     private void beginGame()

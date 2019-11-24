@@ -11,7 +11,6 @@ public class PlayerAim : MonoBehaviour
     private float bulletCountUp;
     private bool allowedToShoot = false;
 
-    public GameObject Item;
     public Image shootItemTimer;
     private float itemCountUp;
     private bool allowedToShootItem = false;
@@ -80,11 +79,11 @@ public class PlayerAim : MonoBehaviour
                     }
                 }
 
-                if (itemCountUp < GetComponent<ItemSpawnManager>().WeaponPrefab.GetComponent<ItemManager>().throwRate)
+                if (itemCountUp < GetComponent<ItemSpawnManager>().ItemPrefab.GetComponent<ItemManager>().throwRate)
                 {
                     itemCountUp += Time.deltaTime;
 
-                    shootItemTimer.GetComponent<Image>().fillAmount = itemCountUp / GetComponent<ItemSpawnManager>().WeaponPrefab.GetComponent<ItemManager>().throwRate;
+                    shootItemTimer.GetComponent<Image>().fillAmount = itemCountUp / GetComponent<ItemSpawnManager>().ItemPrefab.GetComponent<ItemManager>().throwRate;
                 }
                 else
                 {

@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBeforeHot: 2.5
+  SpikePack: {fileID: 8790202597408732382, guid: b0c017015dc0b2944bc8e5cbbf47381d,
+    type: 3}
 --- !u!114 &4784756112908060887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ce7176e33f99148a204e5fbfa20123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 70
-  timeBeforeDestroying: 5
+  Damage: 35
+  DestroyTimer: 5
   throwSpeed: 25
-  throwRate: 2
+  throwRate: 5

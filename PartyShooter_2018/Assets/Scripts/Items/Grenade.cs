@@ -10,8 +10,10 @@ public class Grenade : MonoBehaviour
     public float timeBeforeHot;
     private bool hot = false;
 
-    private int playerNbOfThrower;
-    public int throwerId { get { return playerNbOfThrower; } set { playerNbOfThrower = value; } }
+    private int throwerId;
+    public int ThrowerId { get { return throwerId; } set { throwerId = value; } }
+
+    public GameObject SpikePack;
 
     /*private float throwSpeed;
     public float ThrowSpeed { get { return throwSpeed; } set { throwSpeed = value; } }*/
@@ -40,7 +42,7 @@ public class Grenade : MonoBehaviour
     }
     IEnumerator MakeExplode()
     {
-        yield return new WaitForSeconds(GetComponent<ItemManager>().timeBeforeDestroying);
+        yield return new WaitForSeconds(GetComponent<ItemManager>().DestroyTimer);
 
         Explode();        
     }
@@ -57,7 +59,7 @@ public class Grenade : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PlayerManager>().PlayerId != playerNbOfThrower)
+            if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PlayerManager>().PlayerId != throwerId)
             {
                 collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(GetComponent<ItemManager>().Damage);
 
@@ -68,7 +70,7 @@ public class Grenade : MonoBehaviour
     private void Explode()
     {
         //explosion
-
+        Instantiate(SpikePack, gameObject.transform.position, transform.rotation);
         Destroy(gameObject);
 
     }
