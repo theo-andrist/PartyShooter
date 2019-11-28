@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1854368051657994715}
   - component: {fileID: 1854368051657994660}
   - component: {fileID: 1854368051657994661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: saw down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140f0d38517ef0468890bcba0530d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 12
+  Damage: 5
 --- !u!1 &1854368051835923349
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854368051835923351}
   - component: {fileID: 1854368051835923350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SawPack
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
-  destroyTimer: 3
+  destroyTimer: 2
 --- !u!1 &1854368051924599693
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 1854368051924599695}
   - component: {fileID: 1854368051924599688}
   - component: {fileID: 1854368051924599689}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: saw up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140f0d38517ef0468890bcba0530d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 12
+  Damage: 5
 --- !u!1 &1854368052431886917
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 1854368052431886919}
   - component: {fileID: 1854368052431886912}
   - component: {fileID: 1854368052431886913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: saw right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140f0d38517ef0468890bcba0530d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 12
+  Damage: 5
 --- !u!1 &1854368053636551188
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1854368053636551190}
   - component: {fileID: 1854368053636551191}
   - component: {fileID: 1854368053636551184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: saw left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,4 +488,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1140f0d38517ef0468890bcba0530d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 12
+  Damage: 5

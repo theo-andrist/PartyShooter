@@ -426,7 +426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -467,6 +467,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   isRoofed: 0
+  RauchWolken: {fileID: 1804400114335841640, guid: 54436bd58a7b1db42a8d76152a73a966,
+    type: 3}
+  RauchWolkeLuft: {fileID: 2686997635525949288, guid: c8b0ac82575c0b14f89745fdcbe1cc89,
+    type: 3}
 --- !u!114 &4738821228069541728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +504,8 @@ MonoBehaviour:
   indestructibleField: {fileID: 6214238713976785740}
   indestructible: 0
   healthSlider: {fileID: 8114026193638787059}
+  HitMarkerPrefab: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3,
+    type: 3}
 --- !u!114 &993830745792701584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunReversed: 0
-  ItemPrefab: {fileID: 7225044670611197377, guid: da4c187ad6d8fe6409415dee0747eb74,
+  ItemPrefab: {fileID: 6267717351473246192, guid: 17be1601145654c4492bbe4f81cb0582,
     type: 3}
   itemSpawnPoint: {fileID: 296013073235696716}
 --- !u!50 &1641278821704201006
@@ -553,7 +559,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0e2cc74a7c3714c4d85db6bbdb33c44a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ValveRifle : MonoBehaviour
 {
-    [SerializeField]
-    private float timeBetweenBullets;
+    public float timeBetweenBullets;
      
     public GameObject Bullet;
     public GameObject BulletSpawn;

@@ -10,8 +10,7 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject gunPivotPoint;
 
-    [SerializeField]
-    private GameObject WeaponPrefab;
+    public GameObject WeaponPrefab;
 
     private GameObject weaponInstance;
     public GameObject WeaponInstance

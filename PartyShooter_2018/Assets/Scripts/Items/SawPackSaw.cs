@@ -10,7 +10,8 @@ public class SawPackSaw : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(Damage);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

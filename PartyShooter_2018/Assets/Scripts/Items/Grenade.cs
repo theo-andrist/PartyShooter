@@ -11,9 +11,12 @@ public class Grenade : MonoBehaviour
     private bool hot = false;
 
     private int throwerId;
-    public int ThrowerId { get { return throwerId; } set { throwerId = value; } }
+    public int ThrowerId { get { return throwerId; } set { throwerId = value; setInputNames(); } }
 
     public GameObject SpikePack;
+    public GameObject ExplosionPrefab;
+
+    private string itemInput;
 
     /*private float throwSpeed;
     public float ThrowSpeed { get { return throwSpeed; } set { throwSpeed = value; } }*/
@@ -31,7 +34,10 @@ public class Grenade : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (Input.GetAxis(itemInput) > 0.5 && hot)
+        {
+            Explode();
+        }
     }
     IEnumerator MakeHot()
     {
@@ -52,7 +58,7 @@ public class Grenade : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(GetComponent<ItemManager>().Damage);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(GetComponent<ItemManager>().Damage);
 
                 Explode();
             }
@@ -61,7 +67,7 @@ public class Grenade : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PlayerManager>().PlayerId != throwerId)
             {
-                collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(GetComponent<ItemManager>().Damage);
+                collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(GetComponent<ItemManager>().Damage);
 
                 Explode();
             }
@@ -70,8 +76,27 @@ public class Grenade : MonoBehaviour
     private void Explode()
     {
         //explosion
+        Instantiate(ExplosionPrefab, gameObject.transform.position, transform.rotation);
         Instantiate(SpikePack, gameObject.transform.position, transform.rotation);
         Destroy(gameObject);
 
+    }
+    public void setInputNames()
+    {
+        switch (throwerId)
+        {
+            case 0:
+                itemInput = "P1Item";
+                break;
+            case 1:
+                itemInput = "P2Item";
+                break;
+            case 2:
+                itemInput = "P3Item";
+                break;
+            case 3:
+                itemInput = "P4Item";
+                break;
+        }
     }
 }

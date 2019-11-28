@@ -37,7 +37,7 @@ public class BulletValveRifle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(damage);
         }
 
         Destroy(gameObject);

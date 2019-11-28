@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask roofLayer;
     public bool isRoofed;
 
+    public GameObject RauchWolken;
+    public GameObject RauchWolkeLuft;
+
     private Rigidbody2D rB;
     
     private int jumpsMade;
@@ -110,7 +113,16 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (jumpPressed)
                     {
-                        verticalMovement = new Vector3(0, jumpForce, 0);
+                        if (isGrounded)
+                        {
+                            Instantiate(RauchWolken, transform.position - new Vector3(0, 0.75f, 0), RauchWolken.transform.rotation);
+                        }
+                        else
+                        {
+                            Instantiate(RauchWolkeLuft, transform.position - new Vector3(0, 0.75f, 0), RauchWolken.transform.rotation);
+                        }
+
+                        verticalMovement = new Vector3(0, jumpForce, 0);                        
 
                         jumpsMade += 1;
 

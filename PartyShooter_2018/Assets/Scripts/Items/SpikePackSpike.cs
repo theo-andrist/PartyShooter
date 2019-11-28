@@ -15,7 +15,7 @@ public class SpikePackSpike : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(Damage);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(Damage);
             Destroy(gameObject);
         }
     }

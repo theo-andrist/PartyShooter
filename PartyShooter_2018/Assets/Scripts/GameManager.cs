@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         {
             if (players[i].transform.position.y < BottomDeadLine)
             {
-                players[i].GetComponent<PlayerHealth>().TakeDamage(1000f);
+                players[i].GetComponent<PlayerHealth>().TakeRockhitDamage(1000f);
                 players.Remove(players[i]);
             }
         }

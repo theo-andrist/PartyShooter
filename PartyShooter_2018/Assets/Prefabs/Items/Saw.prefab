@@ -133,9 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ce7176e33f99148a204e5fbfa20123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 40
-  DestroyTimer: 5
-  throwSpeed: 50
+  Damage: 30
+  DestroyTimer: 3
+  throwSpeed: 45
   throwRate: 6
 --- !u!114 &3378620136127168102
 MonoBehaviour:

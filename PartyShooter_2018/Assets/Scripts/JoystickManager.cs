@@ -7,8 +7,7 @@ public class JoystickManager : MonoBehaviour
 {
     public static List<int> idOfPlayerConnected = new List<int>();
 
-    [SerializeField]
-    private GameObject[] JoystickControllers;
+    public GameObject[] JoystickControllers;
 
     void Update()
     {

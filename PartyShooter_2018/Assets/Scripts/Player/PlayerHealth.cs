@@ -19,6 +19,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Slider healthSlider;
 
+    public GameObject HitMarkerPrefab;
+
     private void Start()
     {
         GameManagerObject = GameObject.Find("GameManager");
@@ -56,11 +58,12 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeRockhitDamage(float damage)
     {
         if (!indestructible)
         {
             Health -= damage;
+            Instantiate(HitMarkerPrefab, transform.position, HitMarkerPrefab.transform.rotation);
         }
     }
 }

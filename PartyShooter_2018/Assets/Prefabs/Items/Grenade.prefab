@@ -132,8 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b5ec25953285f49a07dbbc03d5cb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeHot: 2.5
+  timeBeforeHot: 1.5
   SpikePack: {fileID: 8790202597408732382, guid: b0c017015dc0b2944bc8e5cbbf47381d,
+    type: 3}
+  ExplosionPrefab: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
 --- !u!114 &4784756112908060887
 MonoBehaviour:
@@ -149,5 +151,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 35
   DestroyTimer: 5
-  throwSpeed: 25
+  throwSpeed: 30
   throwRate: 5

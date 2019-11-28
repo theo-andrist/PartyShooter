@@ -8,7 +8,7 @@ public class SawHitTriggerForPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(transform.parent.GetComponent<ItemManager>().Damage);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeRockhitDamage(transform.parent.GetComponent<ItemManager>().Damage);
         }
     }
 }
