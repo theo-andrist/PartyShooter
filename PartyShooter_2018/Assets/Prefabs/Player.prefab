@@ -524,7 +524,7 @@ MonoBehaviour:
   - {r: 0.5330782, g: 1, b: 0, a: 1}
   - {r: 1, g: 0, b: 0.37790203, a: 1}
   gunPivotPoint: {fileID: 4738821228227295033}
-  WeaponPrefab: {fileID: 2744805071760304296, guid: 493dfb04d8164ea468bb1e5edc69b87c,
+  WeaponPrefab: {fileID: 7372249268548380263, guid: c3f64250c645440469a9f673f18d0f99,
     type: 3}
   playerId: 0
 --- !u!114 &114349138475660174
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunReversed: 0
-  ItemPrefab: {fileID: 7225044670611197377, guid: da4c187ad6d8fe6409415dee0747eb74,
+  ItemPrefab: {fileID: 7943850257072573038, guid: 205d209db93837548ac5d7a871335218,
     type: 3}
   itemSpawnPoint: {fileID: 296013073235696716}
 --- !u!50 &1641278821704201006

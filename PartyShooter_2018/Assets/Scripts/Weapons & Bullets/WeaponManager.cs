@@ -10,13 +10,19 @@ public class WeaponManager : MonoBehaviour
 
     public int bulletDamage;
 
-    public int shootRate;
+    public float shootRate;
     public void Shoot()
     {
         switch (WeaponName)
         {
             case "Valve-Rifle":
                 GetComponent<ValveRifle>().Shoot();
+                break;
+            case "AK-Rifle":
+                GetComponent<AKRifle>().Shoot();
+                break;
+            case "Magnum-Pistol":
+                GetComponent<MagnumPistol>().Shoot();
                 break;
             default:
                 Debug.Log("Name nicht gefunden:" + name);

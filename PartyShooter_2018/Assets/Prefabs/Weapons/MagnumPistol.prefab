@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602396708022404993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.442, y: 0.758, z: -0.16942954}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.493, y: 0.778, z: 0}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_Children: []
   m_Father: {fileID: 4564572746906018960}
   m_RootOrder: 0
@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 4564572746906018960}
   - component: {fileID: 3998314812274118709}
   - component: {fileID: 114205861697589806}
+  - component: {fileID: 4456689222676249053}
   m_Layer: 0
   m_Name: MagnumPistol
   m_TagString: Untagged
@@ -56,8 +57,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7372249268548380263}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.055, y: -0.078, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: -0.01, y: -0.05, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 8991675388774984328}
   m_Father: {fileID: 0}
@@ -125,3 +126,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 8626598052151482260, guid: 5d389e25e7426134ea585bffa5d6b945, type: 3}
   BulletSpawn: {fileID: 1602396708022404993}
+--- !u!114 &4456689222676249053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372249268548380263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df048695edae044795899990a6b9b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: Magnum-Pistol
+  bulletSpeed: 80
+  bulletDamage: 33
+  shootRate: 1.8

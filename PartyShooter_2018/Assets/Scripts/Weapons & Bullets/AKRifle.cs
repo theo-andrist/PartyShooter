@@ -18,6 +18,8 @@ public class AKRifle : MonoBehaviour
     public void Shoot()
     {
         gameObject.SetActive(true);
-        Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+
+        GameObject BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, GunPivot.transform.rotation);
+        BulletInstance.GetComponent<BulletValveRifle>().Weapon = gameObject;
     }
 }
