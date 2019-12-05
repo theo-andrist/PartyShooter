@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunReversed: 0
-  ItemPrefab: {fileID: 6267717351473246192, guid: 17be1601145654c4492bbe4f81cb0582,
+  ItemPrefab: {fileID: 7225044670611197377, guid: da4c187ad6d8fe6409415dee0747eb74,
     type: 3}
   itemSpawnPoint: {fileID: 296013073235696716}
 --- !u!50 &1641278821704201006

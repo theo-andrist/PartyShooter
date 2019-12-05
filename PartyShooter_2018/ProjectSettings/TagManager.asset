@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Item
   - Platform
+  - FxTemporaire
+  - JoinUI
   layers:
   - Default
   - TransparentFX

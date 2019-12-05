@@ -28,21 +28,32 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        List<int> IdOfPlayersConnected = new List<int>();
 
-        if (JoystickManager.idOfPlayerConnected.Count < 1)
+        for (int i = 0; i < 4; i++)
         {
-            JoystickManager.idOfPlayerConnected.Add(0);
-            JoystickManager.idOfPlayerConnected.Add(1);
+            if (ConnectSceneManager.PlayersConnected[i] == true)
+            {
+                IdOfPlayersConnected.Add(i);
+            }
+        }
+
+        if (IdOfPlayersConnected.Count < 1)
+        {
+            IdOfPlayersConnected.Add(0);
+            IdOfPlayersConnected.Add(1);
             //JoystickManager.idOfPlayerConnected.Add(2);
             //JoystickManager.idOfPlayerConnected.Add(3);
         }
 
-        for (int i = 0; i < JoystickManager.idOfPlayerConnected.Count; i++)
+        for (int i = 0; i < IdOfPlayersConnected.Count; i++)
         {
             GameObject playerInstance = Instantiate(PlayerPrefab, SpawnPoints[i].transform.position, PlayerPrefab.transform.rotation);
-            playerInstance.GetComponent<PlayerManager>().PlayerId = JoystickManager.idOfPlayerConnected[i];
+            playerInstance.GetComponent<PlayerManager>().PlayerId = IdOfPlayersConnected[i];
             players.Add(playerInstance);
         }
+
+        beginGame();
 
     }
     void Update()

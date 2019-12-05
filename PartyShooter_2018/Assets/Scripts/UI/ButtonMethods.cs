@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class ButtonMethods : MonoBehaviour
 {
+    public GameObject joystickControllerObject; 
+    public void SetControllerReady()
+    {
+       /* joystickControllerObject.GetComponent<SingleJoystickManager>().Ready = true;
+        SingleJoysticksManager.PlayerConnected[joystickControllerObject.GetComponent<SingleJoystickManager>().PlayerId] = true;*/
+    }
     public void LoadScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName);

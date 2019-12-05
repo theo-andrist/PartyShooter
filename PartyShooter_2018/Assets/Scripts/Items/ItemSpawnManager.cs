@@ -10,19 +10,17 @@ public class ItemSpawnManager : MonoBehaviour
 
     public Transform itemSpawnPoint;
 
-    public void Awake()
-    {
-        if (JoystickController.choosedItems[GetComponent<PlayerManager>().PlayerId] != null)
-        {
-            ItemPrefab = JoystickController.choosedItems[GetComponent<PlayerManager>().PlayerId];
-        }
-    }
-
     public void throwItem()
     {
+        if (PlayerEquipment.choosedItems[GetComponent<PlayerManager>().PlayerId] != null)
+        {
+            ItemPrefab = PlayerEquipment.choosedItems[GetComponent<PlayerManager>().PlayerId];
+            Debug.Log("!");
+        }
+
         GameObject itemInstance;
 
-        //für Spawnverschiebung des items
+        //für SpawnPositionsVerschiebung des items
         switch (ItemPrefab.transform.name)
         {
             case "Saw":
@@ -33,8 +31,6 @@ public class ItemSpawnManager : MonoBehaviour
                 break;
         }
 
-
-         
         //Um Eigenschaften des Instanzierten Items zu setzen
         switch (ItemPrefab.transform.name)
         {

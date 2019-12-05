@@ -1908,7 +1908,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 567
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -2368,6 +2368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bd3beafb9e99f4f9bf2ae23f120dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystickControllerObject: {fileID: 0}
 --- !u!114 &710595530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2878,7 +2879,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 567
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -5367,7 +5368,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 567
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -6220,6 +6221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bd3beafb9e99f4f9bf2ae23f120dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystickControllerObject: {fileID: 0}
 --- !u!114 &1958855161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6613,7 +6615,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 567
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0

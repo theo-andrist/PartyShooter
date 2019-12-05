@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &7705952814136468659
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &7881062322827740279
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &8102229821801928780
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &8550009516464875129
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &8622558495003147339
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &8790202597408732382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
 --- !u!1 &9160062285033970958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,4 +1235,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.5
-  Damage: 20
+  Damage: 15
