@@ -15,7 +15,6 @@ public class ItemSpawnManager : MonoBehaviour
         if (PlayerEquipment.choosedItems[GetComponent<PlayerManager>().PlayerId] != null)
         {
             ItemPrefab = PlayerEquipment.choosedItems[GetComponent<PlayerManager>().PlayerId];
-            Debug.Log("!");
         }
 
         GameObject itemInstance;

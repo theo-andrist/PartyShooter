@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
             players = value; 
         }
     }
-
     private void Start()
     {
         List<int> IdOfPlayersConnected = new List<int>();
@@ -45,7 +44,11 @@ public class GameManager : MonoBehaviour
             //JoystickManager.idOfPlayerConnected.Add(2);
             //JoystickManager.idOfPlayerConnected.Add(3);
         }
-
+        for (int i = 0; i < IdOfPlayersConnected.Count; i++)
+        {
+            Debug.Log("Player: " + i + "Weapon: " + PlayerEquipment.choosedWeapons + "Item: " + PlayerEquipment.choosedItems);
+        }
+        
         for (int i = 0; i < IdOfPlayersConnected.Count; i++)
         {
             GameObject playerInstance = Instantiate(PlayerPrefab, SpawnPoints[i].transform.position, PlayerPrefab.transform.rotation);
@@ -96,8 +99,10 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerHealth>().indestructible = false;
     }
 
-    private void beginGame()
+    IEnumerator beginGame()
     {
+        //Gameobject countdownPanel = 
+        yield return new WaitForSeconds(1);
         Debug.Log("beginGame -> needs to be programmed");
     }
 }

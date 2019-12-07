@@ -11,9 +11,7 @@ public class PanelManager : MonoBehaviour
     public GameObject EquipmentPanel;
     public GameObject MapPanel;
 
-    private int actualPanelLayer = 0;
-
-    
+    private int actualPanelLayer = 0;   
 
     void Update()
     {

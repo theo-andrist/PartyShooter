@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - FxTemporaire
   - JoinUI
+  - Weapon
   layers:
   - Default
   - TransparentFX

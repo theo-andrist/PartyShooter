@@ -42,14 +42,12 @@ public class PlayerManager : MonoBehaviour
     {
 
         //WeaponInstance = Instantiate(JoystickController.choosedWeapons[playerId], gunPivotPoint.transform);
-        if (PlayerEquipment.choosedWeapons[playerId] == null)
+        if (PlayerEquipment.choosedWeapons[playerId] != null)
         {
-            weaponInstance = Instantiate(WeaponPrefab, gunPivotPoint.transform);
+            WeaponPrefab = PlayerEquipment.choosedWeapons[playerId];
         }
-        else
-        {
-            weaponInstance = Instantiate(PlayerEquipment.choosedWeapons[playerId], gunPivotPoint.transform);
-        }
+
+        weaponInstance = Instantiate(WeaponPrefab, gunPivotPoint.transform);
 
         gunPivotPoint.transform.rotation = Quaternion.Euler(0, 0, 90);
 
